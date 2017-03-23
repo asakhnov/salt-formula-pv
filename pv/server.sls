@@ -2,7 +2,7 @@
 
 pv_package:
   pkg.installed:
-    - name: {{ server.pkgs }}
+    - name: {{ server.pkg }}
 
 /etc/platformvisibility/platformvisibility.conf:
   file.managed:
