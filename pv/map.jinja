@@ -1,0 +1,26 @@
+{%- load_yaml as server_defaults %}
+Debian:
+  pkgs:
+    - heat-pooler
+  service: heat-pooler
+  openstack:
+    user: platform-visibility
+    password: password
+    project: service
+    domain: default
+    auth_url: http://localhost:5000/v3
+    # This makes me cry
+    project_id:
+    member_role_id:
+    heat_url:
+    user_id:
+  grafana:
+    host: localhost
+    proto: https
+    user: admin
+    password: password
+    vm_datasource: default
+    host_datasource: default
+{%- endload %}
+
+{%- set server = salt['grains.filter_by'](server_defaults, merge=salt['pillar.get']('pv:server')) %}

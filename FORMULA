@@ -1,0 +1,8 @@
+name: pv
+os: Debian
+os_family: Debian
+version: 1.0
+release: 1
+summary: Formula for installing and configuring platform visibility tools
+description: Formula for installing and configuring platform visibility tools
+top_level_dir: pv
